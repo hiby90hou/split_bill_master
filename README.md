@@ -1,45 +1,43 @@
-# webpack react hot reload starter
+# Start Split Bill
 
-All you need, none you don't. 
+A web app that can help event organizer to split bill and collect event fee in a easy way. For a group of people to go to a no-split-bill restaurant, this app is also an ideal tool for them - one person can pay the total price to them, and collect money from other people through this app(scan QR code or click the link in the app). 
 
-Sensible starter with hot reload to try react with webpack 3 that deploys straight to github pages.
+## demo website
+
+[Start Split Bill](https://hiby90hou.github.io/split_bill_master/)
 
 ## Based on
 
-1. Bundler: [Webpack](http://webpack.github.io/docs/), [Babel](https://babeljs.io)
-2. Language: [ES2015](https://babeljs.io/docs/learn-es2015/)
-3. Library: [React](https://reactjs.org/), [Sass](http://sass-lang.com/), [Mocha](https://mochajs.org)
+1. React
+2. NodeJS
+3. Material-UI
+4. Paypal sandbox
+5. Heroku
 
-## Usage
+## Installation
 
 1. clone this repo
 ```
-git clone THIS_GIT_REPO_URL
+git clone https://github.com/hiby90hou/split_bill_master.git
 ```
 
-2. install dependencies using npm or yarn
+2. install dependencies using npm
 ```
 npm install
 ```
-or
-```
-yarn install
-```
 
-3. start dev server and start coding in `/app`
+3. Set PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET to the environment
+
+You need to get a paypal developer account, creat a new app in the sandbox, and get these two keys from them.
+
+4. start dev server and start coding in the main folder
 ```
+cd split_bill_master
+
 npm start
 ```
 
-## build and deploy with github pages
-
-Github pages support hosting your site in a docs directory within your repo. Simply run the following command to build your site into docs directory and update the source setting on github. 
-
-```
-npm run build
-```
-
-## run tests in `/test`
-```
-npm test
-``` 
+## Unsolved Problem
+1. No money to use the real paypal account for test.
+2. Need to have a function that can send event organizer email with the event information.
+3. If event organizer close the webpage, all the information on it are gone - Need a function that can help user use order id to continue the bill collection.
