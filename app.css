@@ -1,0 +1,1 @@
+.complete,.home,.inputForm,.paypal{min-height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column}form{text-align:center}.paypal div,canvas,form div{margin-bottom:10px}canvas{display:block}h1{font-family:Roboto;font-size:5rem;text-align:center}.button{width:100%;height:100%}.complete div{-ms-align-self:flex-end;align-self:flex-end}
