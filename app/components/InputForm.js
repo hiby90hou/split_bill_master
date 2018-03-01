@@ -82,7 +82,7 @@ export default class InputForm extends React.Component {
         </div>
         <div>
           <label>
-            Restaurant Name:
+            Event Name:
           </label>
           <TextField type="text" value={this.state.restaurantName} onChange={this.handleNameChange} />
         </div>

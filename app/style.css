@@ -5,6 +5,10 @@
 input {
 	display: block;
 }*/
+html,body{
+	margin: 0;
+	padding: 0;
+}
 .home, .inputForm, .paypal, .complete{
 	min-height: 100vh;
 	display: flex;
@@ -41,4 +45,13 @@ h1 {
 .complete div {
 	-ms-align-self: flex-end;
 	align-self: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+	label {
+		display: block;
+	}
+	input {
+	text-align: center;
+	}
 }
