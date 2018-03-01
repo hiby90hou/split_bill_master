@@ -33,7 +33,7 @@ export default class InputForm extends React.Component {
   }
 
   createOrder(opts) {
-    return fetch('http://localhost:3000/api/new_bill', {
+    return fetch('https://serene-shore-75692.herokuapp.com/api/new_bill', {
       method: 'post',
       headers: {
         "Content-Type": "application/json"

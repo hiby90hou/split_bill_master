@@ -17,7 +17,7 @@ export default class PageRefresher extends React.Component {
 
   tick() {
     //fetch data from database
-    fetch('http://localhost:3000/api/check?order_id=' + this.props.orderid)
+    fetch('https://serene-shore-75692.herokuapp.com/api/check?order_id=' + this.props.orderid)
     .then(response => response.json())
     .then(data => {
       console.log(data.length);
