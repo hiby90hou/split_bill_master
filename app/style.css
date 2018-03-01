@@ -1,4 +1,7 @@
-
 body {
   background-color: mistyrose;
+}
+
+input {
+	display: block;
 }
