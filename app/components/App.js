@@ -3,7 +3,8 @@ import Paypal from './Paypal'
 import InputForm from './InputForm'
 import Home from './Home'
 import PageRefresher from './PageRefresher'
-
+import Grid from 'material-ui/Grid'
+import Paper from 'material-ui/Paper';
 
 export default class App extends React.Component {
 
@@ -78,25 +79,39 @@ export default class App extends React.Component {
       handlePaidNumChange: this.handlePaidNumChange
     }
 
+    const style = {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around'
+    };
+
     if(this.state.page=="home"){
-      return <Home {...homeProps}/>
+      return <Grid container justify="center" >
+          <Home {...homeProps}/>
+        </Grid>
     }
     else if(this.state.page=="inputForm"){
-      return <div>
+      return <div className="inputForm">
         <InputForm {...inputFormProps}/>
       </div>
     }
     else if(this.state.page == "paypal" && this.state.canPay){
-      return <div>
+      return <div className="paypal">
+        <h1>Collect your money</h1>
+        <div>Your event ID is {this.state.orderid}</div>
+        <div>The location of this event is {this.state.name}</div>
+        <div>There are {this.state.peopleNum} people in this event</div>
+        <div>Each person need to pay <span>${this.state.price}</span></div>
         <PageRefresher {...pageRefresherProps}/>
-        <p>Your event ID is {this.state.orderid}</p>
-        <p>The location of this event is {this.state.name}</p>
-        <p>There are {this.state.peopleNum} people in is event</p>
-        <div>Each person need to pay ${this.state.price}</div>
         <Paypal {...paypalProps}/>
       </div>
     }else{
-      return <div> payment collecting complete</div>
+      return <div className="complete">
+        <h1>payment collection complete</h1>
+        <div>Your event ID is {this.state.orderid}</div>
+        <div>The location of this event is {this.state.name}</div>
+        <div>Total collect {(this.state.peopleNum-1)*this.state.price}</div>
+      </div>
     }
 
   }

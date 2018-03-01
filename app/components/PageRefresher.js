@@ -43,8 +43,8 @@ export default class PageRefresher extends React.Component {
   render() {
     return (
       <div>
-        <p>orderID: {this.props.orderid}</p>
-        <p>{this.state.paidNum}</p>
+        {/*<p>orderID: {this.props.orderid}</p>*/}
+        {this.state.paidNum} person paid the bill, {this.props.peopleNum - this.state.paidNum} left.
         {/*<p>Seconds: {this.state.seconds}</p>*/}
       </div>
     );

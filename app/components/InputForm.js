@@ -1,5 +1,7 @@
 import React from 'react'
 import 'babel-polyfill'
+import TextField from 'material-ui/TextField';
+import Button from 'material-ui/Button';
 
 export default class InputForm extends React.Component {
   constructor(props) {
@@ -71,23 +73,32 @@ export default class InputForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Your email:
-        </label>
-        <input type="text" value={this.state.organizer} onChange={this.handleOrganizerChange} />
-        <label>
-          Restaurant Name:
-        </label>
-        <input type="text" value={this.state.restaurantName} onChange={this.handleNameChange} />
-        <label>
-          Total Price:
-        </label>
-        <input type="number" step="0.01" value={this.state.totalPrice} onChange={this.handlePriceChange} />
+        <h1>About this event</h1>
+        <div>
+          <label>
+            Your email:
+          </label>
+          <TextField type="text" value={this.state.organizer} onChange={this.handleOrganizerChange} />
+        </div>
+        <div>
+          <label>
+            Restaurant Name:
+          </label>
+          <TextField type="text" value={this.state.restaurantName} onChange={this.handleNameChange} />
+        </div>
+        <div>
+          <label>
+            Total Price:
+          </label>
+          <TextField type="number" step="0.01" value={this.state.totalPrice} onChange={this.handlePriceChange} />
+        </div>
+        <div>
         <label>
           People Num:
         </label>
-        <input type="number" value={this.state.peopleNum} onChange={this.handlePeopleChange} />
-        <input type="submit" value="Submit" />
+        <TextField type="number" value={this.state.peopleNum} onChange={this.handlePeopleChange} />
+        </div>
+        <Button variant="raised" color="primary" type="submit" >Split Bill</Button>
       </form>
     );
   }
