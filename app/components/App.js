@@ -56,7 +56,6 @@ export default class App extends React.Component {
   }
 
   render() {
-
     const homeProps = {
       handlePageChange: this.handlePageChange
     }
@@ -86,9 +85,7 @@ export default class App extends React.Component {
     };
 
     if(this.state.page=="home"){
-      return <Grid container justify="center" >
-          <Home {...homeProps}/>
-        </Grid>
+      return <Home {...homeProps}/>
     }
     else if(this.state.page=="inputForm"){
       return <div className="inputForm">

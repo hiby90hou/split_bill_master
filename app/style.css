@@ -5,12 +5,17 @@
 input {
 	display: block;
 }*/
+* {
+	box-sizing:border-box;
+}
 html,body{
 	margin: 0;
 	padding: 0;
 }
 .home, .inputForm, .paypal, .complete{
 	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,13 +48,17 @@ h1 {
 }
 
 .complete div {
-	-ms-align-self: flex-end;
+	margin-right: 2rem;
 	align-self: flex-end;
 }
 
 @media screen and (max-width: 767px) {
 	label {
 		display: block;
+	}
+	.complete div {
+		margin-right: 0;
+		align-self: center;
 	}
 	input {
 	text-align: center;
