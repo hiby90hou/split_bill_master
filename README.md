@@ -41,3 +41,4 @@ npm start
 1. No money to use the real paypal account for test.
 2. Need to have a function that can send event organizer email with the event information.
 3. If event organizer close the webpage, all the information on it are gone - Need a function that can help user use order id to continue the bill collection.
+4. When user finish payment they can go back to paypal payment page - this bug need to be fixed
