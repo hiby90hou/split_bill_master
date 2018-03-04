@@ -1,4 +1,4 @@
-# Start Split Bill
+# Split Bill Master
 
 A web app that can help event organizer to split bill and collect event fee in a easy way. For a group of people to go to a no-split-bill restaurant, this app is also an ideal tool for them - one person can pay the total price to them, and collect money from other people through this app(scan QR code or click the link in the app). 
 
